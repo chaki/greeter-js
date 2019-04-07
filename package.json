@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "tsc"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -13,12 +15,21 @@
   },
   "keywords": [],
   "author": "",
+  "files": [
+    "lib/**/*"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chaki/greeter-js/issues"
   },
   "homepage": "https://github.com/chaki/greeter-js#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.7.1",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.2"
   }
 }
